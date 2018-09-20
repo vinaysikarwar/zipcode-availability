@@ -28,7 +28,7 @@
             "WebTechnologyCodes\\ZipcodeAvailablity\\": ""
         }
     },
-	"repositories":[
+	"repositories":{
 		{
 			"type": "composer",
 			"url": "https://repo.magento.com/"
