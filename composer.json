@@ -20,15 +20,14 @@
         "OSL-3.0",
         "AFL-3.0"
     ],
-	 "autoload": [
+	"autoload": [
         "files": [
             "registration.php"
         ],
-		"psr-4": {
-            "Magento\\Catalog\\": ""
+        "psr-4": {
+            "WebTechnologyCodes\\ZipcodeAvailablity\\": ""
         }
-       
-    ],
+    ]
 	"repositories":[
 		{
 			"type": "composer",
