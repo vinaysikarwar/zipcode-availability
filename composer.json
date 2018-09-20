@@ -16,10 +16,7 @@
     },
     "type": "magento2-module",
     "version": "0.74.0-beta4",
-    "license": {
-        "OSL-3.0",
-        "AFL-3.0"
-    },
+    "license": "GNU AGPLv3",
 	"autoload": {
         "files": {
             "registration.php"
