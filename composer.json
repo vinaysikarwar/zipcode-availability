@@ -24,12 +24,5 @@
         "psr-4": {
             "WebTechnologyCodes\\ZipcodeAvailablity\\": ""
         }
-    },
-	"repositories":{
-		[
-			"type": "composer",
-			"url": "https://repo.magento.com/"
-		
-		],
-	},
+    }
 }
