@@ -16,24 +16,23 @@
     },
     "type": "magento2-module",
     "version": "0.74.0-beta4",
-    "license": [
+    "license": {
         "OSL-3.0",
         "AFL-3.0"
-    ],
-	"autoload": [
-        "files": [
+    },
+	"autoload": {
+        "files": {
             "registration.php"
-        ],
+        },
         "psr-4": {
             "WebTechnologyCodes\\ZipcodeAvailablity\\": ""
         }
-    ]
+    },
 	"repositories":[
 		{
 			"type": "composer",
 			"url": "https://repo.magento.com/"
 		
 		}
-	],
-    
+	},
 }
