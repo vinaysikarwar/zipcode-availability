@@ -20,7 +20,7 @@
         "OSL-3.0",
         "AFL-3.0"
     ],
-	 "autoload": {
+	 "autoload": [
         "files": [
             "registration.php"
         ],
@@ -28,6 +28,13 @@
             "Magento\\Catalog\\": ""
         }
        
-    }
+    ],
+	"repositories":[
+		{
+			"type": "composer",
+			"url": "https://repo.magento.com/"
+		
+		}
+	],
     
 }
