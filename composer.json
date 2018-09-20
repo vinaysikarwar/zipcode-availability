@@ -29,10 +29,10 @@
         }
     },
 	"repositories":{
-		{
+		[
 			"type": "composer",
 			"url": "https://repo.magento.com/"
 		
-		}
+		],
 	},
 }
