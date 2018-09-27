@@ -7,7 +7,7 @@
         </tab>
 		<section id="zipcodeAvailablity" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
             <class>separator-top</class>
-            <label>Zipcode Availablity</label>
+            <label>Zipcode Availability</label>
             <tab>WebTechnologyCodes</tab>
             <resource>WebTechnologyCodes_ZipcodeAvailablity::zipcodeAvailablity_config</resource>
             <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
@@ -18,7 +18,7 @@
                 </field>
                 <field id="block_title" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Block Title</label>
-                    <comment>Check Delivery Availablity</comment>
+                    <comment>Check Delivery Availability</comment>
                 </field>
 				<field id="success_message" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Success Message</label>
@@ -28,11 +28,7 @@
                     <label>Failure Message</label>
                     <comment>Delivery Not Possible In Your Area</comment>
                 </field>
-				<field id="empty_message" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
-                    <label>Empty Message</label>
-                    <comment>Please Enter Zip Code</comment>
-                </field>
-            </group>
+			</group>
         </section>
 	</system>
 </config>

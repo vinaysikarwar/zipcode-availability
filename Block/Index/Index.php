@@ -7,10 +7,13 @@ namespace WebTechnologyCodes\ZipcodeAvailablity\Block\Index;
 
 class Index extends \Magento\Framework\View\Element\Template {
 
-    public function __construct(\Magento\Catalog\Block\Product\Context $context, array $data = []) {
-
-        parent::__construct($context, $data);
-
+    public function __construct(
+	\Magento\Catalog\Block\Product\Context $context, 
+	\WebTechnologyCodes\ZipcodeAvailablity\Helper\Data $helper,
+	array $data = []
+	){
+    parent::__construct($context, $data);
+	$this->helper = $helper;
     }
 
 
@@ -18,5 +21,11 @@ class Index extends \Magento\Framework\View\Element\Template {
     {
         return parent::_prepareLayout();
     }
+	
+	
+	public function modulesysvalue($variable)
+	{
+	 return $status = $this->helper->getGeneralConfig($variable);	 
+	}
 
 }

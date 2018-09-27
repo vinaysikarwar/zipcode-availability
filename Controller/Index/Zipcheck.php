@@ -53,7 +53,7 @@ protected $_cookieManager;
 		parent::__construct($context);
         $this->actionFactory = $actionFactory;
 		$this->_coreRegistry = $coreRegistry;
-        $this->helper        = $helper;
+        $this->helper = $helper;
 		$this->_resultPageFactory = $pageFactory;
 		$this->_cookieManager = $cookieManager;
         $this->_cookieMetadataFactory = $cookieMetadataFactory;
@@ -82,17 +82,29 @@ protected $_cookieManager;
                // Set cookie
                $this->_cookieManager->setPublicCookie('zipcode',$zipcode ,$metadata);
 			   $delivery_days = $dlist[0]['delivery_days'];
-               $html .= '<h4>Delivery Available In Your Area</h4>';
-			   $html .= '<p style="color:green;">Delivery in '.$delivery_days.' days<p>';
-
+			   
+			   $successmsg = $this->helper->getGeneralConfig('success_message');
+			    if($successmsg){
+				  $html .= '<h4>'.$successmsg.'</h4>'; 
+			    }else{
+				 $html .= '<h4>Delivery Available In Your Area</h4>';	
+				}
+               if($delivery_days){
+				 $html .= '<p style="color:green;">Delivery in '.$delivery_days.' days<p>';  
+			   }
 			   // Get cookie
                $value = $this->_cookieManager->getCookie('zipcode');
 			   $html .= '<p style="color:green;">'.$value.'<p>';
 
 
 			}else{
-            $this->_cookieManager->deleteCookie('zipcode');
-            $html = "<p style='color:red;'>Delivery is not Available In Your Area</p>";
+             $this->_cookieManager->deleteCookie('zipcode');
+			 $failuremsg = $this->helper->getGeneralConfig('failure_message');
+			    if($failuremsg){
+				   $html = "<p style='color:red;'>".$failuremsg."</p>";
+			    }else{
+				   $html = "<p style='color:red;'>Delivery is not Available In Your Area</p>";
+				}
 			}
 			
 			/** @var \Magento\Framework\Controller\Result\Json $result */

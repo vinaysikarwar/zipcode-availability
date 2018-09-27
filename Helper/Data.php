@@ -25,7 +25,7 @@ class Data extends AbstractHelper
         \WebTechnologyCodes\ZipcodeAvailablity\Model\ResourceModel\Zipavail\CollectionFactory $zipCollectionFactory
 
        
-    ) {
+    ){
         $this->zipcodefactory     = $zipcodefactory;
         $this->zipCollectionFactory = $zipCollectionFactory;
         parent::__construct($context, $objectManager, $templateContext->getStoreManager());

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/menu.xsd">
     <menu>
-        <add id="WebTechnologyCodes_ZipcodeAvailablity::parent" title="WTC" module="WebTechnologyCodes_ZipcodeAvailablity" sortOrder="100" resource="WebTechnologyCodes_ZipcodeAvailablity::parent"/>
-        <add id="WebTechnologyCodes_ZipcodeAvailablity::zipavail" title="Zipcode Availablity" module="WebTechnologyCodes_ZipcodeAvailablity" sortOrder="20" parent="WebTechnologyCodes_ZipcodeAvailablity::parent" action="zipcodeavailablity/zipavail" resource="WebTechnologyCodes_ZipcodeAvailablity::zipavail"/>
+        <add id="WebTechnologyCodes_ZipcodeAvailablity::parent" title="WTC" module="WebTechnologyCodes_ZipcodeAvailablity" sortOrder="100" resource="WebTechnologyCodes_ZipcodeAvailablity::parent"  dependsOnConfig="zipcodeAvailablity/general/enable"/>
+        <add id="WebTechnologyCodes_ZipcodeAvailablity::zipavail" title="Zipcode Availablity" module="WebTechnologyCodes_ZipcodeAvailablity" sortOrder="20" parent="WebTechnologyCodes_ZipcodeAvailablity::parent" action="zipcodeavailablity/zipavail" resource="WebTechnologyCodes_ZipcodeAvailablity::zipavail"  dependsOnConfig="zipcodeAvailablity/general/enable"/>
     </menu>
 </config>

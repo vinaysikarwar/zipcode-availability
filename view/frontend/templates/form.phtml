@@ -10,11 +10,28 @@
 ?>
 <?php $_product = $block->getProduct(); ?>
 <?php $buttonTitle = __('Check Availability'); ?>
-<div class="box-tocart">
+	<?php 
+		$status = $block->modulesysvalue('enable'); 
+		if($status == 1){
+	?>
+	  <div class="box-tocart">
     <div class="fieldset">
         
         <div class="field qty">
-            <label class="label" for="qty"><span><?= /* @escapeNotVerified */ __('Check Availability at ') ?></span></label>
+		     <?php  $block_title = $block->modulesysvalue('block_title');
+              if($block_title !=''){
+			  ?>
+			<label class="label" for="qty"><span><?php echo $block_title ;?></span></label>
+              <?php				
+			  }else{
+			  ?>
+			<label class="label" for="qty"><span><?= /* @escapeNotVerified */ __('Check Availability at ') ?></span></label>
+              <?php				
+			  }
+			 ?>
+		
+	         
+            
             <div class="control">
 			<p>
              <input type="text"
@@ -39,8 +56,10 @@
         
     </div>
 </div>
-
-
+	  
+	<?php
+	}
+	?>
 
 <script type="text/javascript">
 
